@@ -62,10 +62,10 @@ h1 {
     input {
       height: 3rem;
       padding: 0.8rem 0.6rem;
-      flex: 0 0 12rem;
+      flex: 0 0 auto;
       margin-left: 2rem;
       font-family: 'Arial';
-      width: 12rem;
+      width: 10rem;
     }
 
     &--submit {
