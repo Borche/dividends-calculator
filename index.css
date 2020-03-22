@@ -25,13 +25,13 @@ h1 {
 .container {
   overflow-x: hidden;
   width: 100rem;
-  max-width: 96vw;
+  max-width: 94vw;
   margin: 5rem 0;
   background: rgba(40, 40, 40, 0.8);
   color: #e1ffff;
   padding: 4rem;
   font-size: 1.6rem;
-  font-family: 'Candara';
+  font-family: 'Baloo Bhai 2';
   font-weight: 100;
   display: flex;
   flex-direction: column;
@@ -39,17 +39,25 @@ h1 {
   -webkit-box-shadow: 0px 10px 26px 4px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 10px 26px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 10px 26px 4px rgba(0, 0, 0, 0.4); }
+  @media (max-width: 1000px) {
+    .container {
+      margin: 3vw 0; } }
   @media (max-width: 700px) {
     .container {
-      margin: 2vw 0;
       padding: 4rem 2rem; } }
 
 .inputs .input {
   margin: 0.5rem 0;
   display: flex; }
+  @media (max-width: 700px) {
+    .inputs .input {
+      margin-top: 1.2rem; } }
   .inputs .input label {
     flex: 0 2 40rem;
-    line-height: 3rem; }
+    vertical-align: middle; }
+    @media (max-width: 700px) {
+      .inputs .input label {
+        line-height: 1.2; } }
   .inputs .input input {
     height: 3rem;
     padding: 0.8rem 0.6rem;
@@ -71,8 +79,15 @@ h1 {
       -webkit-box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.5);
       box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.5); }
+      @media (max-width: 700px) {
+        .inputs .input--submit button {
+          margin-top: 3rem;
+          width: 80%;
+          height: 5rem;
+          font-size: 2rem; } }
 
 .outputs {
+  display: none;
   margin-top: 5rem;
   width: 100%;
   overflow-x: auto; }

@@ -87,6 +87,7 @@ function placeDataOnPage(yearData) {
     table.appendChild(tr);
   });
 
+  outputs.style.display = 'block';
   outputs.appendChild(table);
 }
 
