@@ -1,1 +1,1 @@
-# revenue-calculator
+# dividends-calculator
