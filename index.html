@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Revenue Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Beräkna avkastning över tid</h1>
+      <div class="inputs">
+        <div class="input">
+          <label for="monthlyInvest"
+            >Hur mycket vill du investera varje månad? (SEK)</label
+          >
+          <input
+            type="tel"
+            id="monthlyInvest"
+            name="monthlyInvest"
+            value="1000"
+          />
+        </div>
+        <div class="input">
+          <label for="rateOfReturn"
+            >Vilken genomsnittlig avkastning räknar du med per år? (%)</label
+          >
+          <input type="tel" id="rateOfReturn" name="rateOfReturn" value="8" />
+        </div>
+        <div class="input">
+          <label for="balanceToday"
+            >Hur mycket har du på ditt ISK (investeringssparkonto) idag?</label
+          >
+          <input type="tel" id="balanceToday" name="balanceToday" value="0" />
+        </div>
+        <div class="input">
+          <label for="years">Hur många år tänker du spara?</label>
+          <input type="tel" id="years" name="years" value="35" />
+        </div>
+        <div class="input input--submit">
+          <button id="calculate" onclick="calculate()">Beräkna</button>
+        </div>
+      </div>
+
+      <div class="outputs"></div>
+    </div>
+  </body>
+</html>
