@@ -1,7 +1,7 @@
 $breakpoints: (
   'tiny': 500px,
   'small': 700px,
-  'medium': 1000px,
+  'medium': 1080px,
   'large': 1250px
 ) !default;
 
@@ -29,14 +29,16 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
-
   overflow-y: scroll;
+
+  font-size: 1.6rem;
+  font-family: 'Baloo Bhai 2';
+  font-weight: 100;
 }
 
 h1 {
@@ -54,14 +56,10 @@ h1 {
   overflow-x: hidden;
   width: 100rem;
   max-width: 94vw;
-  margin: 5rem 0;
+  margin: 5rem 0 2rem 0;
   background: rgba(40, 40, 40, 0.8);
   color: rgb(225, 255, 255);
   padding: 4rem;
-
-  font-size: 1.6rem;
-  font-family: 'Baloo Bhai 2';
-  font-weight: 100;
 
   display: flex;
   flex-direction: column;
@@ -72,11 +70,13 @@ h1 {
   box-shadow: 0px 10px 26px 4px rgba(0, 0, 0, 0.4);
 
   @include respond-to('medium') {
-    margin: 3vw 0;
+    width: 100%;
+    margin: 3vw 3vw;
   }
 
   @include respond-to('small') {
     padding: 4rem 2rem;
+    margin: 3vw 0 2.5rem 0;
   }
 }
 
@@ -90,7 +90,7 @@ h1 {
     }
 
     label {
-      flex: 0 2 50rem;
+      flex: 0 1 100%;
       vertical-align: middle;
 
       @include respond-to('small') {
@@ -115,7 +115,7 @@ h1 {
         cursor: pointer;
         opacity: 0.9;
         background-image: linear-gradient(120deg, #84fab0 0%, #57da8d 100%);
-        margin-top: 1rem;
+        margin-top: 3rem;
         padding: 1rem 3rem;
         border: none;
         // border: 1px solid #8fd3f4;
@@ -125,11 +125,16 @@ h1 {
         -moz-box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.5);
         box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.5);
 
+        @include respond-to('medium') {
+          font-size: 1.9rem;
+          padding: 1.1rem 5rem;
+        }
+
         @include respond-to('small') {
-          margin-top: 3rem;
-          width: 80%;
-          height: 5rem;
+          width: 75%;
+          height: 4.8rem;
           font-size: 2rem;
+          padding: 0;
         }
       }
     }
@@ -138,11 +143,19 @@ h1 {
 
 .outputs {
   display: none;
-  margin-top: 5rem;
+  margin-top: 3rem;
   width: 100%;
   overflow-x: auto;
 
   table {
     width: 100%;
   }
+}
+
+footer {
+  font-size: 1.3rem;
+  color: rgba(225, 255, 255, 1);
+  margin-top: auto;
+  margin-bottom: 2rem;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
